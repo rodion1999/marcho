@@ -9,6 +9,7 @@
   "author": "Rodion Pustovoj",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
