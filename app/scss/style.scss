@@ -404,6 +404,120 @@
     }
   }
 
+  .product{
+    padding: 105px 0 120px;
+    text-align: center;
+    &__items{
+      display: grid;
+      grid-template-columns: repeat(3 , 1fr);
+      grid-gap: 45px 30px ;
+    }
+    &__link{
+      border: 1px solid $accent;
+      padding: 14px 27px;
+      color: $title;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-top: 55px;
+    }
+  }
+
+
+  .product-item {
+    max-width: 370px;
+    &__img-box{
+      position: relative;
+      height: 370px;
+      overflow: hidden;
+      margin-bottom: 26px;
+    }
+    &__link-box{
+      transition: all .3s;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 50px;
+      height: 50px;
+      width: 220px;
+      margin: 0 auto;
+      border-radius: 25px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      transform: translateY(300%);
+    }
+    &__link--line::after,
+    &__link--line::before{
+     content: '';
+     position: absolute;
+     background-color: #fff;
+     width: 1px;
+     height: 36px;
+     top: 8px;
+     background-color: #ececec;
+    }
+    &__link--line::before{
+      left: 70px;
+    }
+    &__link--line::after{
+      right: 70px;
+    }
+    &__link{
+      display: inherit;
+      path{
+        transition: all .3s;
+      }
+    }
+    &__link:hover{
+      path{
+        fill: $accent;
+      }
+    }
+    &__images{
+      object-fit: cover;
+    }
+    &:hover{
+      .product-item__link-box{
+        transform: rotateY(0);
+      }
+    }
+    &__title{
+      color: $title;
+      font-size: 22px;
+      padding: 15px 0 20px;
+    }
+    &__price{
+      display: flex;
+      justify-content: center;
+      @extend %roboto-400;
+    }
+    &__new-price{
+      padding: 0 12px;
+      color: $title;
+    }
+    &__old-price{
+      padding: 0 12px;
+      text-decoration: line-through;
+    }
+    &--sale{
+      .product-item__img-box::before{
+        content: 'SALE';
+        text-transform: uppercase;
+        position: absolute;
+        @extend %btn;
+        top: 25px;
+        left: 25px;
+        padding: 7px 10px;
+        line-height: 1;
+      }
+    }
+  }
+  .star{
+    margin: 0 auto;
+  }
+
+  
 
 
 
