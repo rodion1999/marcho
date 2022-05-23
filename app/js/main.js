@@ -1,5 +1,6 @@
 $(function () {
   
+  
   $('.product-tabs__top-item').on('click', function (e) {
     e.preventDefault();
     $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
@@ -117,5 +118,6 @@ function initializeClock(id, endtime) {
 
 const deadline =$('.promo__clock').attr('data-time');
   initializeClock('promo__clock', deadline);
-  
+
+ 
 });
