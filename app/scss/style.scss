@@ -19,6 +19,7 @@
       @extend %roboto-700;
       color: #28384f;
       margin-bottom: 40px;
+      line-height: 52px;
     }
     &__text{
       margin-bottom: 55px;
@@ -33,6 +34,9 @@
     padding: 120px 0 105px;
     &__inner{
       display: flex;
+    }
+    &__filter-btn{
+      display: none;
     }
     &__filters{
       max-width: 370px;
